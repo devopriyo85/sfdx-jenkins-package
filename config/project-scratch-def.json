@@ -1,7 +1,7 @@
 {
     "orgName": "JenkinsMigration",
     "edition": "Enterprise",
-    "features": ["Communities", "ServiceCloud", "Chatbot"],
+    "features": ["Communities", "ServiceCloud"],
     "settings": {
         "communitiesSettings": {
             "enableNetworksEnabled": true
