@@ -6,7 +6,7 @@
         },
         {
             "path": "force-app/main/default/",
-            "package": "DFDXJenkinsV2",
+            "package": "Jenkins",
             "versionName": "ver 0.1",
             "versionNumber": "0.1.0.NEXT",
             "default": false
@@ -16,6 +16,6 @@
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "44.0",
     "packageAliases": {
-        "DFDXJenkinsV2": "0Ho7S000000GmbWSAS"
+        "Jenkins": "04t7S000000oyvSQAQ"
     }
 }
