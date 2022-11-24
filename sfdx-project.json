@@ -12,8 +12,15 @@
             "default": false
         },
         {
-            "path": "force-app/main/default/",
+            "path": "force-app\\main\\default\\",
             "package": "DEV2-2",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false
+        },
+        {
+            "path": "force-app/main/default/",
+            "package": "DEV2-3",
             "versionName": "ver 0.1",
             "versionNumber": "0.1.0.NEXT",
             "default": false
@@ -25,6 +32,7 @@
     "packageAliases": {
         "Jenkins": "0Ho7S000000GmasSAC",
         "Jenkins@1.0.0-1": "04t0N000001E1ksQAC",
-        "DEV2-2": "0Ho7S000000GmaxSAC"
+        "DEV2-2": "0Ho7S000000GmaxSAC",
+        "DEV2-3": "0Ho7S000000Gmb2SAC"
     }
 }
