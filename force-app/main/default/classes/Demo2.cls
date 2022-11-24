@@ -6,4 +6,8 @@ public with sharing class Demo2 {
     public String getAppVersion2() {
 		return '1.0.0';
 	}
+
+  public String getAppVersion3() {
+		return 'Hello';
+	}
 }
