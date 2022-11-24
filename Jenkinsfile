@@ -118,23 +118,23 @@ node {
             // -------------------------------------------------------------------------
 
           stage('Create Package Version') {
-               // if (isUnix()) {
-             //       output = sh returnStdout: true, script: "${toolbelt}/sfdx force:package:version:create --package ${PACKAGE_NAME} --installationkeybypass --wait 10 --json --targetdevhubusername HubOrg"
-              //  } else {
-               //     output = bat(returnStdout: true, script: "\"${toolbelt}/sfdx\" force:package:version:create --package ${PACKAGE_NAME} --installationkeybypass --wait 10 --json --targetdevhubusername HubOrg").trim()
-                //    output = output.readLines().drop(1).join(" ")
-              //  }
+               /if (isUnix()) {
+                    output = sh returnStdout: true, script: "${toolbelt}/sfdx force:package:version:create --package ${PACKAGE_NAME} --installationkeybypass --wait 10 --json --targetdevhubusername HubOrg"
+                } else {
+                    output = bat(returnStdout: true, script: "\"${toolbelt}/sfdx\" force:package:version:create --package ${PACKAGE_NAME} --installationkeybypass --wait 10 --json --targetdevhubusername HubOrg").trim()
+                    output = output.readLines().drop(1).join(" ")
+                }
 
                 // Wait 5 minutes for package replication.
-              //  sleep 300
+               sleep 300
 
-              //  def jsonSlurper = new JsonSlurperClassic()
-             //   def response = jsonSlurper.parseText(output)
+                def jsonSlurper = new JsonSlurperClassic()
+              def response = jsonSlurper.parseText(output)
 
-                //PACKAGE_VERSION = response.result.SubscriberPackageVersionId
-                PACKAGE_VERSION='04t7S000000oyvSQAQ'
+                PACKAGE_VERSION = response.result.SubscriberPackageVersionId
+                //PACKAGE_VERSION='04t7S000000oyvSQAQ'
 
-               // response = null
+               response = null
 
                 //echo ${PACKAGE_VERSION}
             } 
@@ -197,14 +197,7 @@ node {
                 if (rc != 0) {
                     error 'Salesforce package install scratch org deletion failed.'
                 }
-            }
-
-            stage('Delete Package Install Scratch Org') {
-                rc = bat returnStatus: true, script: "\"${toolbelt}/sfdx\" force:org:delete --targetusername installorg --noprompt"
-                if (rc != 0) {
-                    error 'Salesforce package install scratch org deletion failed.'
-                }
-            }
+            }           
 
 
               stage('Install Package In Dev org') {
