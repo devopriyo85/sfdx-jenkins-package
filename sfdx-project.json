@@ -3,10 +3,17 @@
         {
             "path": "force-app",
             "default": true
-        },        
+        },
+        {
+            "path": "force-app\\main\\default\\",
+            "package": "DEVJenkinsmigration",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false
+        },
         {
             "path": "force-app/main/default/",
-            "package": "DEVJenkinsmigration",
+            "package": "DEVJenkinsmigrationV1.0=",
             "versionName": "ver 0.1",
             "versionNumber": "0.1.0.NEXT",
             "default": false
@@ -16,6 +23,7 @@
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "44.0",
     "packageAliases": {
-       "DEVJenkinsmigration": "0Ho7S000000Gmb7SAC"
+        "DEVJenkinsmigration": "0Ho7S000000Gmb7SAC",
+        "DEVJenkinsmigrationV1.0=": "0Ho7S000000GmbCSAS"
     }
 }
