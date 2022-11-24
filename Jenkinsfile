@@ -69,7 +69,7 @@ node {
             // -------------------------------------------------------------------------
 
             stage('Display Test Scratch Org') {
-                rc = bat returnStatus: true, script: "${toolbelt}/sfdx force:org:display --targetusername ciorg"
+                rc = bat returnStatus: true, script: ""\"${toolbelt}/sfdx\" force:org:display --targetusername ciorg"
                 if (rc != 0) {
                     error 'Salesforce test scratch org display failed.'
                 }
@@ -120,7 +120,7 @@ node {
                 if (isUnix()) {
                     output = sh returnStdout: true, script: "${toolbelt}/sfdx force:package:version:create --package ${PACKAGE_NAME} --installationkeybypass --wait 10 --json --targetdevhubusername HubOrg"
                 } else {
-                    output = bat(returnStdout: true, script: "${toolbelt}/sfdx force:package:version:create --package ${PACKAGE_NAME} --installationkeybypass --wait 10 --json --targetdevhubusername HubOrg").trim()
+                    output = bat(returnStdout: true, script: "\"${toolbelt}/sfdx\" force:package:version:create --package ${PACKAGE_NAME} --installationkeybypass --wait 10 --json --targetdevhubusername HubOrg").trim()
                     output = output.readLines().drop(1).join(" ")
                 }
 
@@ -191,7 +191,7 @@ node {
             // -------------------------------------------------------------------------
 
             stage('Delete Package Install Scratch Org') {
-                rc = command "${toolbelt}/sfdx force:org:delete --targetusername installorg --noprompt"
+                rc = bat returnStatus: true, script: "\"${toolbelt}/sfdx\" force:org:delete --targetusername installorg --noprompt"
                 if (rc != 0) {
                     error 'Salesforce package install scratch org deletion failed.'
                 }
