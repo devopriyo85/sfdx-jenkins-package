@@ -10,6 +10,13 @@
             "versionName": "Jenkins - Winter '19",
             "versionNumber": "1.0.0.NEXT",
             "default": false
+        },
+        {
+            "path": "force-app/main/default/",
+            "package": "DEV2-2",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false
         }
     ],
     "namespace": "",
@@ -17,6 +24,7 @@
     "sourceApiVersion": "44.0",
     "packageAliases": {
         "Jenkins": "0Ho7S000000GmasSAC",
-        "Jenkins@1.0.0-1": "04t0N000001E1ksQAC"
+        "Jenkins@1.0.0-1": "04t0N000001E1ksQAC",
+        "DEV2-2": "0Ho7S000000GmaxSAC"
     }
 }
