@@ -196,6 +196,21 @@ node {
                     error 'Salesforce package install scratch org deletion failed.'
                 }
             }
+
+            stage('Delete Package Install Scratch Org') {
+                rc = bat returnStatus: true, script: "\"${toolbelt}/sfdx\" force:org:delete --targetusername installorg --noprompt"
+                if (rc != 0) {
+                    error 'Salesforce package install scratch org deletion failed.'
+                }
+            }
+
+
+              stage('Install Package In Dev org') {
+                rc =bat returnStatus: true, script: "\"${toolbelt}/sfdx\" force:package:install --package ${PACKAGE_VERSION} --targetusername ${SF_USERNAME} --wait 10"
+                if (rc != 0) {
+                    error 'Salesforce package install failed.'
+                }
+            }
         }
     }
 }
