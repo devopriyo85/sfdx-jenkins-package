@@ -4,11 +4,11 @@ import groovy.json.JsonSlurperClassic
 
 node {
 
-    def SF_CONSUMER_KEY=env.CONNECTED_APP_CONSUMER_KEY_DH
-    def SF_USERNAME=env.HUB_ORG_DH
+    def SF_CONSUMER_KEY='3MVG9vvlaB0y1YsIbhM9xtvqdmzKKoHcvUXQL34fLNv7c2_xaPfYYPIdOJRcL6.qUr82dDCGgPDMwAo0lyDRe'//env.CONNECTED_APP_CONSUMER_KEY_DH
+    def SF_USERNAME='devopriyo.seal@resilient-goat-3h0xx8.com'//env.HUB_ORG_DH
     def SERVER_KEY_CREDENTALS_ID=env.JWT_CRED_ID_DH
     def TEST_LEVEL='RunLocalTests'
-    def PACKAGE_NAME='0Ho7S000000GmasSAC'
+    def PACKAGE_NAME='0Ho68000000000fCAA'
     def PACKAGE_VERSION
     def SF_INSTANCE_URL = env.SF_INSTANCE_URL ?: "https://login.salesforce.com"
 
