@@ -41,7 +41,8 @@ node {
 
                if (isUnix()) {
                rc = command "${toolbelt}/sfdx force:auth:jwt:grant --instanceurl ${SF_INSTANCE_URL} --clientid ${SF_CONSUMER_KEY} --username ${SF_USERNAME} --jwtkeyfile ${server_key_file} --setdefaultdevhubusername --setalias HubOrg"
-                }else{
+                }
+                else{
                     rc = bat returnStatus: true, script: "\"${toolbelt}/sfdx\" force:auth:jwt:grant --instanceurl ${SF_INSTANCE_URL} --clientid ${SF_CONSUMER_KEY} --username ${SF_USERNAME} --jwtkeyfile ${server_key_file} --setdefaultdevhubusername --setalias HubOrg"
                 }
 
@@ -66,12 +67,9 @@ node {
             
         }
     }
+    }
+
 }
 
-def command(script) {
-    if (isUnix()) {
-        return sh(returnStatus: true, script: script);
-    } else {
-        return bat(returnStatus: true, script: script);
-    }
-}
+
+
