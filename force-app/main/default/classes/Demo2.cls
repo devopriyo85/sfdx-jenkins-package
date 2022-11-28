@@ -13,4 +13,8 @@ public with sharing class Demo2 {
   public String getAppVersion31() {
 		return 'Hello world';
 	}
+
+  public String getAppVersion32() {
+		return 'Hello world';
+	}
 }
