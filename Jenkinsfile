@@ -51,7 +51,7 @@ node {
 
 			println rc
 
-            GITBRANCHPATH = bat returnStdout: true, script: " git tag --sort version:refname | tail -1" 
+            GITBRANCHPATH = bat returnStdout: true, script: " git tag --sort version:refname" 
             
             println GITBRANCHPATH
             rmdgk = bat returnStdout: true, script: " echo y |\"${toolbelt}/sfdx\" plugins:install sfdx-git-delta" 
