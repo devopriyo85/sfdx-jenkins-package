@@ -14,4 +14,8 @@ public with sharing class MyClass {
 		return '1.0.0';
 	}  
 
+	public String checkAppVersion1234() {
+		return '2.0.0';
+	}  
+
 }
