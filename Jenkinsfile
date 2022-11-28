@@ -50,14 +50,9 @@ node {
             if (rc != 0) { error 'hub org authorization failed' }
 
 			println rc
-            stage('Install sgd-git-delta plugin') {
-            steps {
-                script {
-                    bat 'echo y | "\"${toolbelt}/sfdx\" plugins:install sfdx-git-delta'
-                }
-            }
-        }
             
+            rmdgk = bat returnStdout: true, script: " echo y |\"${toolbelt}/sfdx\" plugins:install sfdx-git-delta" 
+           println rmdgk
             rmdgf = bat returnStdout: true, script: "\"${toolbelt}/sfdx\" sgd:source:delta --to 'HEAD' --from 'HEAD~1' --output '.' " 
 			println rmdgf
 			// need to pull out assigned username
