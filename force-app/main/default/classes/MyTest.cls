@@ -15,6 +15,13 @@ private class MyTest {
         // Uncomment the following line to cause a build failure
         // System.assert(false);
     }
+    @isTest
+    static void myUnitTest4() {
+        MyClass demo = new MyClass();
+        System.assertEquals(demo.checkAppVersion12(), '1.0.0');
+        // Uncomment the following line to cause a build failure
+        // System.assert(false);
+    }
 
     @isTest
     static void myUnitTest1() {
