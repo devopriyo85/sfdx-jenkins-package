@@ -18,4 +18,6 @@ public with sharing class MyClass {
 		return '2.0.0';
 	}  
 
+	
+
 }
