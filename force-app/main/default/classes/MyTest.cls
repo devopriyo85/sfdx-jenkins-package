@@ -31,7 +31,7 @@ private class MyTest {
     }
 
     @isTest
-    static void myUnitTest5() {
+    static void myUnitTest6() {
         Demo2 demo1 = new Demo2();
         System.assertEquals(demo1.getAppVersion32(), 'Hello world');
         // Uncomment the following line to cause a build failure
