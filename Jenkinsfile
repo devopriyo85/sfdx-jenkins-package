@@ -51,7 +51,7 @@ node {
 
 			println rc
 
-            GITBRANCHPATH = bat returnStdout: true, script: " git name --rev --name-only HEAD" 
+            GITBRANCHPATH = bat returnStdout: true, script: " git name-rev --name-only HEAD" 
             GITBRANCH = GITBRANCHPATH.substring(GITBRANCHPATH.lastIndexOf('/')+1,GITBRANCHPATH.length())
             println GITBRANCH
             rmdgk = bat returnStdout: true, script: " echo y |\"${toolbelt}/sfdx\" plugins:install sfdx-git-delta" 
