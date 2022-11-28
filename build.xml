@@ -1,4 +1,4 @@
-<project name="Shivasoft ANT Tutorial" default="deployCode" basedir="."
+<project name="Shivasoft ANT Tutorial" default="deployCode" basedir="." xmlns:sf="antlib:com.salesforce">
 <taskdef resource="net/sf/antcontrib/antlib.xml">
 		<classpath>
 			<pathelement location="lib/ant-contrib-1.0b3.jar"/>
