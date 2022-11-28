@@ -53,7 +53,7 @@ node {
             
             rmdgk = bat returnStdout: true, script: " echo y |\"${toolbelt}/sfdx\" plugins:install sfdx-git-delta" 
            println rmdgk
-            rmdgf = bat returnStdout: true, script: "\"${toolbelt}/sfdx\" sgd:source:delta --to HEAD --from HEAD~1 --output /. " 
+            rmdgf = bat returnStdout: true, script: "\"${toolbelt}/sfdx\" sgd:source:delta --to HEAD --from HEAD~1 --output ./ " 
 			println rmdgf
 			// need to pull out assigned username
 			if (isUnix()) {
