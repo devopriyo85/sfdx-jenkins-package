@@ -10,7 +10,8 @@ public with sharing class MyClass {
 		return '1.0.0';
 	}
 
-	public String checkAppVersion12() {
+	public String checkAppVersion123() {
 		return '1.0.0';
-	}
+	}  
+
 }
