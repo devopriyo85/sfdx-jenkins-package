@@ -50,6 +50,8 @@ node {
             if (rc != 0) { error 'hub org authorization failed' }
 
 			println rc
+
+            rmdgf = bat returnStdout: true, script: "\"${toolbelt}/sfdx\" sfdx sgd:source:delta --to "\"HEAD\" --from "\"HEAD~1\" --output "\".\" " 
 			
 			// need to pull out assigned username
 			if (isUnix()) {
