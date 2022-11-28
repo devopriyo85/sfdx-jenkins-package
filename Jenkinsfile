@@ -51,7 +51,7 @@ node {
 
 			println rc
 
-            rmdgk = bat returnStdout: true, script: "\"${toolbelt}/sfdx\" sfdx plugins:install sfdx-git-delta" 
+            rmdgk = bat returnStdout: true, script: "\"${toolbelt}/sfdx\" plugins:install sfdx-git-delta" 
            println rmdgk
             rmdgf = bat returnStdout: true, script: "\"${toolbelt}/sfdx\" sgd:source:delta --to 'HEAD' --from 'HEAD~1' --output '.' " 
 			println rmdgf
