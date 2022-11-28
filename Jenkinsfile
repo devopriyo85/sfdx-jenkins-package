@@ -46,12 +46,16 @@ node {
                 }
 
                
-                if (rc != 0) {
+            if (rc != 0) { error 'hub org authorization failed' }
 
-                    rc = bat returnStatus: true, script: "\"${toolbelt}/sfdx\" force:source:deploy -x package/package.xml --postdestructivechanges destructiveChanges/destructiveChanges.xml --u HubOrg"
-                    error 'Salesforce dev hub org authorization failed.'
-                }
-            }
+			println rc
+			
+			// need to pull out assigned username
+			if (isUnix()) {
+				rmsg = sh returnStdout: true, script: "${toolbelt}/sfdx force:mdapi:deploy -d force-app/main/default/. -u ${SF_USERNAME}"
+			}else{
+			   rmsg = bat returnStdout: true, script: "\"${toolbelt}/sfdx\" force:mdapi:deploy -d force-app/main/default/. -u ${SF_USERNAME}"
+			}
             
            
 
