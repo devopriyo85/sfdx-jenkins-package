@@ -53,9 +53,9 @@ node {
 			
 			// need to pull out assigned username
 			if (isUnix()) {
-				rmsg = sh returnStdout: true, script: "${toolbelt}/sfdx force:mdapi:deploy -x package/package.xml --postdestructivechanges destructiveChanges/destructiveChanges.xml -u ${SF_USERNAME}"
+				rmsg = sh returnStdout: true, script: "${toolbelt}/sfdx force:mdapi:deploy --manifest package/package.xml --postdestructivechanges destructiveChanges/destructiveChanges.xml -u ${SF_USERNAME}"
 			}else{
-			   rmsg = bat returnStdout: true, script: "\"${toolbelt}/sfdx\" force:mdapi:deploy -x package/package.xml --postdestructivechanges destructiveChanges/destructiveChanges.xml  -u ${SF_USERNAME}"
+			   rmsg = bat returnStdout: true, script: "\"${toolbelt}/sfdx\" force:mdapi:deploy --manifest package/package.xml --postdestructivechanges destructiveChanges/destructiveChanges.xml  -u ${SF_USERNAME}"
 			}
             
            
