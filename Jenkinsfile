@@ -51,7 +51,7 @@ node {
 
 			println rc
 
-            rmdgf = bat returnStdout: true, script: "\"${toolbelt}/sfdx\" sfdx sgd:source:delta --to "\"HEAD\" --from "\"HEAD~1\" --output "\".\" " 
+            rmdgf = bat returnStdout: true, script: "\"${toolbelt}/sfdx\" sgd:source:delta --to 'HEAD' --from 'HEAD~1' --output '.' " 
 			
 			// need to pull out assigned username
 			if (isUnix()) {
