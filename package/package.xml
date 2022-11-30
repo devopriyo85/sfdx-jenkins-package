@@ -5,9 +5,6 @@
         <members>MyTest</members>
         <name>ApexClass</name>
     </types>
-    <types>
-        <members>jsconfig</members>
-        <name>LightningComponentBundle</name>
-    </types>
+    
     <version>56.0</version>
 </Package>
