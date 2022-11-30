@@ -62,7 +62,7 @@ private class MyTest {
         // System.assert(false);
     }
     @isTest
-    static void myUnitTest7() {
+    static void myUnitTest8() {
         Demo2 demo = new Demo2();
         System.assertEquals(demo.getAppVersion321(), 'Hello world');
         // Uncomment the following line to cause a build failure
